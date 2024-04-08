@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<robot name="model_generic"> 
+	<link name="usb_cam_brio"/>
+	<link name="camera_link">
+		<inertial>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+			<mass value="0.1"/>
+			<inertia ixx="1.0E-08" ixy="1.0E-08" ixz="1.0E-08" iyy="1.0E-07" iyz="1.0E-07" izz="1.0E-07"/>
+		</inertial>
+		<visual> 
+			<origin xyz=" 0.00000000  0.00000000  0.00000000" rpy="0 0 0" /> 
+			<geometry> 
+				<mesh filename="package://brio_cam/logitech_uio_camera.stl" scale=" 0.00100000  0.00100000  0.00100000"/> 
+			</geometry> 
+			<material name="">
+				<color rgba="0.0792156862745098 0.0819607843137255 0.0933333333333333 1" />
+			</material>
+		</visual> 
+	</link>
+	<joint name="camera_joint" type="fixed">
+		<parent link="camera_link"/>
+		<child link="usb_cam_brio"/>
+	</joint>
+</robot>

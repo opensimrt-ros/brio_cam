@@ -1,0 +1,20 @@
+image_width: 1920
+image_height: 1080
+camera_name: usb_cam_brio
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [1378.0941574903077, 0.0, 952.4428869831772, 0.0, 1378.45160610103, 554.3639265146069, 0.0, 0.0, 1.0]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.11792022518917201, -0.24963379783455664, -0.001834163687804233, -0.002627733758995274, 0.0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [1374.547119140625, 0.0, 944.8644861820503, 0.0, 0.0, 1398.6754150390625, 552.4859326934529, 0.0, 0.0, 0.0, 1.0, 0.0]
