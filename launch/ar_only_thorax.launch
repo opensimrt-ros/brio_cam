@@ -11,7 +11,8 @@
 	<!-- node pkg="tf" type="static_transform_publisher" name="camera_link_broadcaster" args="0 0 1 3.14159265 3.14159265 1.570796325 map usb_cam_acer 100" / -->
 	<group ns="usb_cam_brio">
 		<!-- node pkg="tf" type="static_transform_publisher" name="camera_link_broadcaster" args="0 0 1 3.14159265 0 -1.570796325 map usb_cam_acer 100" / -->
-		<node pkg="tf" type="static_transform_publisher" name="tripod_link_broadcaster" args="0 +0.5 0 0 0 0 map base_link 100" />
+		<!-- node pkg="ar_test" 	type="modifiable_fixed_transform_publisher.py" 	name="tripod_link_broadcaster" args="0 +0.5 0 -1.570796325 0 0 map base_link 100" /-->
+		<node pkg="tf" 			type="static_transform_publisher" 		name="tripod_link_broadcaster" args="0 +0.5 0 -1.570796325 0 0 map base_link 100" />
 		<node pkg="tf" type="static_transform_publisher" name="camera_link_broadcaster" args="0 0 1.4 -1.570796325 0 -1.570796325 base_link camera_link 100" />
 
 		<arg name="max_new_marker_error" default="0.08" />
